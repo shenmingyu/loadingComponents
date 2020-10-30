@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .loader-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  min-height: 100%;
+  min-width: 100%;
+  background: #000
+}
+
+body .loader-wrapper .loader {
+  position: absolute;
+  z-index: 999;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  background: -o-linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  background: linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  -webkit-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg)
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg)
+  }
+}
+
+body .loader-wrapper .loader::before {
+  content: '';
+  position: absolute;
+  z-index: 999;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: #000;
+  border-radius: 50%
+}
+
+body .loader-wrapper .loader::after {
+  content: '';
+  position: absolute;
+  z-index: 998;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  background: -o-linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  background: linear-gradient(45deg, transparent, transparent, #e5f403 90%);
+  -webkit-filter: blur(12px);
+  filter: blur(12px)
+}
