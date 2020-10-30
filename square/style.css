@@ -78,6 +78,14 @@ body .loader .loader-second::before {
   background-color: #000000;
 }
 
+body .loader #textInfo {
+  position: absolute;
+  z-index: 999;
+  color: #FFFFFF;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @-webkit-keyframes anticlockwise {
   0% {
     -webkit-transform: rotate(0deg);
